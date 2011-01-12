@@ -16,7 +16,7 @@ class GTKizzle:
   def __init__(self):
     #subprocess.Popen(['xdg-open','music.mp3'])
     self.player = gst.element_factory_make("playbin2", "player")
-    self.player.set_property("uri", "file://"+os.path.abspath('music.mp3'))
+    self.player.set_property("uri", "file://"+os.path.abspath('music.ogg'))
     self.player.set_state(gst.STATE_PLAYING)
     self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
     self.window.connect("delete_event", self.delete_event)
